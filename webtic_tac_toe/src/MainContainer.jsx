@@ -2,22 +2,25 @@ import React, { useState } from "react";
 
 // PUBLIC_INTERFACE
 /**
- * MainContainer component for WebTicTacToe.
+ * MainContainer component for the WebTicTacToe App.
  * Implements the 3x3 board, player move logic, and game status.
+ * Uses the color palette and light theme as specified.
  */
 const COLORS = {
   primary: "#4CAF50",
   secondary: "#FFC107",
   accent: "#2196F3",
   bg: "#fff",
-  text: "#232323",
+  text: "#232323"
 };
 
 const initialBoard = Array(9).fill(null);
 
+/**
+ * PUBLIC_INTERFACE
+ * Checks if the game has a winner.
+ */
 function calculateWinner(squares) {
-  // PUBLIC_INTERFACE
-  /** Checks if the game has a winner */
   const lines = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
     [0, 3, 6], [1, 4, 7], [2, 5, 8], // cols
